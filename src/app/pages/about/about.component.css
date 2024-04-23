@@ -1,0 +1,45 @@
+.container{
+    padding-top:50px;
+    margin-top: 50px;
+}
+
+.who-we-are{
+    display: flex;
+    flex-direction: row;
+}
+.carousel-img{
+  height:"450";
+  width:"500";
+}
+/* Reverse order on smaller screens */
+@media screen and (min-width: 424px) and (max-width: 767px) {
+  
+    .who-we-are.row {
+        flex-direction: column-reverse; 
+      }
+    .col-xl-5.carousel,
+    .col-xl-5 {
+      width: 100%; 
+      padding-top: 20px;
+    }
+    .col-1 {
+      display: none;
+    }
+  }
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  .who-we-are {
+    flex-direction: row-reverse;
+  }
+  .col-lg-5.carousel{
+      width: 40%; 
+      position: relative;
+      top:50px;
+  }
+  .col-lg-6 {
+    width: 60%;
+  }
+  .col-1 {
+    display: none; 
+  }
+}

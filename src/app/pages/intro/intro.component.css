@@ -1,0 +1,197 @@
+.intro{
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    @media screen and (min-width: 300px)and (max-width: 767px) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-around;
+      position: relative;
+      top: 60px;
+    }
+    @media only screen  and (min-width: 768px){
+      position: relative;
+      top: 60px;
+    }
+    @media screen and (min-width: 769px) and (max-width: 1023px){
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-around;
+      position: relative;
+      top: 60px;
+    }
+}
+.intro-content{
+    position: relative;
+    @media screen and (max-width: 768px){
+      width: 50%;
+    }
+    @media screen and (min-width: 300px) and (max-width: 767px){
+      width: 100%;
+    }
+
+}
+
+.intro-content .intro-title{
+    font-size: 42px;
+    color:black;
+}
+
+.intro-content .intro-description{
+  margin-top: 30px;
+}
+span{
+    color:#fb2e00;
+
+}
+
+.intro-content ul{
+    margin-top: 30px;
+    display: flex;
+}
+.intro-content .videoBtn{
+    position: relative;
+    margin-top: 6px;
+    margin-left: 50px;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 50%;
+    background-color: #6bddd3;
+    color: #fb2e00;
+    border:none;
+    @media screen and (min-width: 375px)and (max-width: 1216px) {
+      width: 50px;
+      height: 50px;
+    }
+
+}
+
+.intro-content .videoBtn:hover{
+    background-color: #fb2e00;
+    color:#fff;
+}
+
+.intro-content .videoBtn::before{
+    content:'';
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    border-radius: 50%;
+    background-color: #6bddd3;
+    z-index: -9;
+    animation: video 2s linear infinite;
+}
+@keyframes video {
+  0%{
+      transform: scale(1);
+      opacity: 1;
+  }
+
+  100%{
+      transform: scale(1.4);
+      opacity: 0;
+  }
+}
+
+@keyframes bounceTop-1{
+  0%,100%{
+      transform: translateY(-30px);
+  }
+  50%{
+      transform: translateY(0px);
+  }
+}
+.downloadBtn{
+    padding: 0 25px;
+    line-height: 55px;
+    color:#fb2e00 ;
+    @media only screen and (min-width: 320px){
+      line-height: 30px;
+      padding: 0 20px;
+    }
+    @media only screen and (min-width: 375px){
+      line-height: 60px;
+      padding: 0 15px;
+    }
+    @media only screen and (min-width: 425px) {
+      line-height: 60px;
+      padding: 0 15px;
+    }
+    @media only screen and (min-width: 767px) {
+      line-height: 30px;
+      padding: 0 15px;
+    }
+    @media screen and (min-width: 768px)and (max-width: 1441px) {
+      line-height: 60px;
+      padding: 0 15px;
+    }
+
+}
+
+.intro-svg{
+  display: flex;
+  align-items: flex-start;
+  max-width: 100%;
+  @media screen and (min-width: 300px)and (max-width: 767px) {
+    position: relative;
+    bottom: 150px;
+    right:50px;
+    width: 300px;
+    height: 200px;
+    transform: scale(1.6);
+    transition: transform 0.3s ease-in-out;
+  }
+  @media only screen  and (max-width: 768px){
+      position: relative;
+      right:50px;
+      bottom:100px;
+      width: 400px; /* Set a width for the SVG (adjust as needed) */
+      height: 400px; /* Set a height for the SVG (adjust as needed) */
+      transform: scale(1.2);
+      transition: transform 0.3s ease-in-out;
+  }
+}
+svg {
+  animation: svgBounce 2s ease-in-out infinite alternate;
+}
+@keyframes svgBounce {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); } /* Adjust bounce height as needed */
+  100% { transform: translateY(0px); }
+}
+.intro-svg #secondSVG #MockupsPreview #cards #card2 {
+  transform: translateX(-420px); /* Initial position off-screen left */
+  animation: cardSlideInLeft 2s ease-in-out forwards;
+}
+
+@keyframes cardSlideInLeft {
+  from { transform: translateX(-420px); }
+  to { transform: translateX(0); }
+}
+
+.intro-svg #secondSVG #MockupsPreview #cards #card1 {
+  transform: translateX(1200px); /* Initial position off-screen right */
+  animation: cardSlideInRight 2s ease-in-out forwards;
+}
+
+@keyframes cardSlideInRight {
+  from { transform: translateX(1200px); }
+  to { transform: translateX(0); }
+}
+
+.intro-svg #secondSVG #MockupsPreview #mobileScreen {
+  transform: translateY(-457px); /* Initial position above viewport */
+  animation: mobileSlideDown 2s ease-in-out forwards;
+}
+
+@keyframes mobileSlideDown {
+  from { transform: translateY(-457px); }
+  to { transform: translateY(0); }
+}
+

@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row pt-5 who-we-are">
+        <div class="col-xs-12 col-sm-12 col-xl-5 col-md-6 col-lg-5 carousel mt-2">
+            <owl-carousel-o [options]="customOptions">
+                <ng-container *ngFor="let image of images">
+                    <ng-template carouselSlide>
+                      <img [src]="image.imageUrl" [alt]="image.altText" class="carousel-img">
+                    </ng-template>
+                  </ng-container>
+            </owl-carousel-o>            
+        </div>
+        <div class="col-1"></div>
+        <div class="col-xs-12 col-sm-12 col-xl-5 col-md-5 col-lg-6">
+            <h1 class="title">Who we are?</h1>
+            <p class="mb-2">
+                Valu is the leading universal financial technology powerhouse, offering a suite of financial
+                services to individuals and businesses. Since its launch in 2017, Valu continues to provide a
+                wide range of comprehensive and convenient financial solutions and products to its customers.
+            </p>
+            <p class="text-justify">
+                Through U*, Valu has pioneered BNPL (Buy Now Pay Later) solutions in the MENA region providing
+                customizable financing plans for up to 60 months across more than 6,000 points of sale and over
+                1,500 online stores, covering a diverse array of categories. Valu also offers investment
+                products, an instant cash redemption program, savings solutions, and a financing solution to
+                facilitate the purchase of big-ticket items up to EGP 15 Million in the luxury space, through
+                AZvalu fund and EFG Hermes ONE, Sha2labaz, Akeed, and Ulter respectively. In addition, Valu
+                offers tools to manage your employees, provide financial services, and more through Valu
+                Business.
+            </p>
+        </div>  
+    </div>
+</div>

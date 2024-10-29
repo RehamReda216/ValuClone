@@ -1,0 +1,21 @@
+.container{
+    padding-top: 100px;
+}
+.download-app-btn {
+    height: 75px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+.download-app-btn:hover {
+    transform: scale(1.05);
+}
+@media (max-width: 1000px) {
+    .download-app-img {
+        height: 48px;
+    }
+}
+@media (max-width: 500px) {
+    .download-app-img {
+        height: 34px;
+    }
+}

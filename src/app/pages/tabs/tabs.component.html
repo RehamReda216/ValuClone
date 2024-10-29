@@ -1,0 +1,8 @@
+<ul class="nav nav-tabs">
+    <li class="nav-item" *ngFor="let tabUrl of tabsUrl;let sr = index" (click)="setTab(sr)">
+        <a class="nav-link " [ngClass]="activatedTab == sr ? 'active': ''" >
+            <img src="{{ tabUrl }}" style=" max-width: 150px;
+            max-height: 16px;">
+        </a>
+    </li>
+</ul>

@@ -1,0 +1,15 @@
+.footer-brand .image{
+    max-width: 100px;
+    padding-bottom: 10px;
+}
+footer{
+    position: sticky;
+    top:100%;
+    background-color: white !important;
+}
+.footer-rights a{
+    color:black;
+}
+.link-text{
+    padding:10px 0;
+}

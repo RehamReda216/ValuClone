@@ -1,0 +1,112 @@
+.container{
+  padding-top:50px;
+}
+
+button{
+  border: 0;
+  background-color: white;
+}
+.title {
+  margin-bottom: 20px; /* Adjust the value as needed */
+}
+.card-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .header-image{
+    width:20%
+  }
+}
+.fa-arrow-right, .fa-arrow-left {
+  padding: 12px 14px;
+  background-color: #dfe5e5;
+  border-radius: 50%;
+}
+
+.card-container {
+  background: none;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/* THE CARD HOLDS THE FRONT AND BACK FACES */
+.thecard { /* Parent class */
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background-color: white;
+}
+
+.card-face { /* Child class */
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.thefront,
+.theback {
+  background: white; /* Consider moving here if needed */
+  height: 340px;
+}
+.theback{
+  padding: 20px;
+}
+@media screen and (max-width: 321px) {
+  .thecard{
+    width: 600px;
+    height:225px;
+  }
+  .thefront,
+  .theback {
+    height: 50px;
+    font-size: 7.5px;
+  }
+
+}
+@media screen and (min-width: 321px) and (max-width: 376px) {
+  .thecard{
+    width: 500px;
+    height:300px;
+  }
+  .thefront,
+  .theback {
+    height: 50px;
+    font-size: 11px;
+  }
+
+}
+@media screen and (min-width: 376px) and (max-width: 426px) {
+  .thecard{
+    width: 400px;
+    height:320px;
+  }
+  .thefront,
+  .theback {
+    height: 150px;
+    font-size: 13px;
+  }
+
+}
+@media screen and (min-width: 426px)and (max-width: 768px) {
+  .thecard{
+    width: 300px;
+    height:400px;
+  }
+  .thefront,
+  .theback {
+    height: 240px;
+  }
+
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .card-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .thefront,
+  .theback {
+    height: 230px;
+  }
+}

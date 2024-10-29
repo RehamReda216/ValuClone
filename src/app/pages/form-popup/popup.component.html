@@ -1,0 +1,145 @@
+<div class="container popup">
+    <mat-dialog-content>
+        <div>
+            <div>
+                <button mat-icon-button class="close-button" [mat-dialog-close]="true">
+                    <mat-icon class="close-icon">close</mat-icon>
+                </button>
+            </div>
+            <div class="headline">
+                <div class="row">
+                <div class="col-12 mb-5">
+                    <h1 class="title text-center">Request a Free Demo Today</h1>
+                    <h6 class="text-center">HR, Payroll, & Benefits. Hassle Free.</h6>
+                </div>
+            </div>
+            </div>
+            <form [formGroup]="requestForm" class="form">
+                <div class="row">
+                    <div class="col-6 fscol  d-flex justify-content-center orange">
+                        <mat-form-field class="form-field">
+                            <mat-label class="label" for="name">Full Name</mat-label>
+                            <input matInput formControlName="name" type="text" id="name" class="mx-3"  placeholder="Your name">
+                               <div *ngIf="requestForm.get('name')?.errors && requestForm.get('name')?.touched">
+                                   <mat-error class="field-error py-2" *ngIf="requestForm.get('name')?.getError('minlength')">
+                                       Name minLength is 3
+                                   </mat-error>
+                                   <mat-error class="field-error py-2" *ngIf="requestForm.get('name')?.getError('maxlength')">
+                                       Name maxLength is 10
+                                   </mat-error>
+                                   <mat-error class="field-error py-2" *ngIf="requestForm.get('name')?.getError('required')">
+                                       Name is Required
+                                   </mat-error>
+                               </div>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-6 sndcol">
+                        <mat-form-field class="form-field">
+                            <mat-label class="label" for="email">Email</mat-label>
+                            <input matInput formControlName="email" type="email" class="mx-3" id="email" placeholder="Your email" required>
+                            <div *ngIf="requestForm.get('email')?.errors && requestForm.get('email')?.touched">
+                                <mat-error class="field-error py-2" *ngIf="requestForm.get('email')?.getError('email')">
+                                    Email InValid
+                                </mat-error>
+                                <mat-error class="field-error py-2" *ngIf="requestForm.get('email')?.getError('required')">
+                                    Email is Required
+                                </mat-error>
+                            </div>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6  d-flex justify-content-center">
+                        <mat-form-field class="form-field">
+                            <mat-label class="label" for="phone">Mobile number</mat-label>
+                            <input matInput formControlName="phone" type="tel" class="mx-3" id="phone" placeholder="Mobile number" required>
+                            <div *ngIf="requestForm.get('phone')?.errors && requestForm.get('phone')?.touched">
+                                <mat-error class="field-error py-2" *ngIf="requestForm.get('phone')?.getError('pattern')">
+                                    Enter valid Egyptian number
+                                </mat-error>
+                                <mat-error class="field-error py-2" *ngIf="requestForm.get('phone')?.getError('required')">
+                                    Mobile number is Required
+                                </mat-error>
+                            </div>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-6 ">
+                        <mat-form-field class="form-field">
+                            <mat-label class="label mb-3" for="how">How did you hear about Valu Business?</mat-label>
+                            <mat-select matInput formControlName="how" class="mx-3"  class="formcontrol" id="how" required>
+                                <mat-option class="field-error py-2" class="option py-2" *ngFor="let media of medias" [value]="media">
+                                    {{media}}
+                                </mat-option>
+                            </mat-select>
+                            <div *ngIf="requestForm.get('how')?.errors && requestForm.get('how')?.touched">
+                                <mat-error class="field-error py-2" *ngIf="requestForm.get('how')?.getError('required')">
+                                    Please select how you know Valu Business.
+                                </mat-error>
+                            </div>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6 d-flex justify-content-center">
+                        <mat-form-field class="form-field">
+                            <mat-label class="label" for="bName">Business name</mat-label>
+                            <input matInput formControlName="bName" id="bName" class="mx-3" placeholder="Company Name" required>
+                            <div *ngIf="requestForm.get('bName')?.errors && requestForm.get('bName')?.touched">
+                                <mat-error class="field-error py-2" *ngIf="requestForm.get('bName')?.getError('required')">
+                                  Business name is required.
+                                </mat-error>
+                            </div>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-6">
+                        <mat-form-field class="form-field">
+                            <mat-label class="label" for="bIndustry">Business industry</mat-label>
+                            <mat-select matInput formControlName="bIndustry" class="mx-3" class="formcontrol" id="bIndustry">
+                                <mat-option class="field-error option py-2" *ngFor="let bIndustry of bIndusteries" [value]="bIndustry">
+                                    {{bIndustry}}
+                                </mat-option>
+                            </mat-select>
+                       </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6 d-flex justify-content-center">
+                        <mat-form-field class="form-field">
+                            <mat-label class="label" for="employeesNo">Number of employees</mat-label>
+                            <mat-select matInput formControlName="employeesNo"  id="employeesNo">
+                                <mat-option *ngFor="let employee of employeeNo" [value]="employee">
+                                    {{employee}}
+                                </mat-option>
+                            </mat-select>
+                       </mat-form-field>
+                    </div>
+                    <div class="col-6">
+                        <mat-form-field class="form-field">
+                            <mat-label class="label" for="services">What services are you interested in?</mat-label>
+                            <mat-select matInput formControlName="services"  id="services" placeholder="Please select" multiple required >
+                                <mat-option *ngFor="let service of services" [value]="service">
+                                    {{service}}
+                                </mat-option>
+                            </mat-select>
+                            <div *ngIf="requestForm.get('services')?.errors && requestForm.get('services')?.touched">
+                                <mat-error class="field-error py-2" *ngIf="requestForm.get('services')?.getError('required')">
+                                    Please select at least one service.
+                                </mat-error>
+                            </div>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div mat-dialog-actions align="end">
+                    <button mat-raised-button (click)="onSubmit()" [disabled]="requestForm.invalid" type="submit" >
+                        <span style= "color:#fb2e00;font-weight:700">Submit</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </mat-dialog-content>
+</div>
+
+

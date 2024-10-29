@@ -1,0 +1,40 @@
+.title{
+    color: #00c4b3;
+}
+.popup{
+    margin-top: 50px;
+    color: #dee2e6;
+}
+button{
+    margin: 2px;
+}
+
+.form{
+    margin: 0px 30px;
+}
+
+.formcontrol{
+    appearance: auto !important;
+}
+.form-field{
+    width:300px;
+    margin-bottom: 30px;
+}
+
+.label{
+    font-weight: 700;
+}
+.close-button{
+    float: right;
+    top:-20px;
+    right:-20px;
+}
+
+.close-icon {
+    color: #fb2e00;
+    animation: transition 1s ease-in-out;
+}
+
+.close-icon:hover {
+  transition: rotate(180deg);
+}

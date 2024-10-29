@@ -1,0 +1,59 @@
+.container {
+    padding-top: 100px;
+}
+.solution{
+    padding: 20px 30px;
+    z-index:1;
+    @media screen and (max-width: 426px) {
+      padding: 20px 0px;
+    }
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+      padding: 20px 20px;
+    }
+
+}
+
+.solution .solution-card {
+    position: relative;
+    border-radius: 24px;
+    background-color: #fff;
+    padding: 35px 25px 0 25px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 24px;
+    min-height: 240px;
+    @media screen and (max-width: 426px) {
+      padding: 35px 0 0 5px;
+    }
+    @media screen and (min-width: 426px) and (max-width: 769px) {
+      padding: 30px 0 0 0;
+      display: flex;
+      justify-content: center;
+    }
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+      padding: 35px 2px 0 25px;
+    }
+}
+
+.solution .solution-card .solution-headline{
+    font-weight: bold;
+    font-size: 1.5rem;
+    @media screen and (min-width: 426px) and (max-width: 769px){
+      font-size: 0.8rem;
+    }
+    @media screen and (min-width: 769px)and (max-width: 1024px) {
+      font-size: 1.2rem;
+    }
+
+}
+.solution .solution-card .solution-description{
+  @media screen and (min-width: 426px) and (max-width: 769px)  {
+    font-size: 11px;
+  }
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    font-size: medium;
+  }
+}
+
+.dialog-open body {
+    overflow: auto; /* Enable background scrolling */
+}

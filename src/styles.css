@@ -1,0 +1,132 @@
+/* ------------- font google ---------------- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/* ------------- global --------------------- */
+* {
+    margin:0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial,'Poppins', sans-serif;
+}
+
+body {
+    overflow: auto; /* or overflow: auto; */
+    background-color: #f4f7f7;
+    position: relative;
+}
+img {
+    max-width: 100%;
+}
+/* by default the ul takes m,pl,bullets */
+ul{
+    margin:0;
+    padding:0;
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color:black;
+}
+
+.defaultbtn {
+    display: inline-block;
+    color: #1d1d1f;
+    background-color: #6bddd3;
+    border: 2px solid #6bddd3;
+    border-radius: 12px;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.defaultbtn:hover{
+    background-color: #fb2e00;
+    color: #ffff !important;
+    border-color: transparent;
+    transform: scale(1.05);
+}
+
+/* -------------------card-------------------- */
+.card-container .owl-item {
+    padding: 20px !important;
+    @media screen and (max-width: 321px){
+      padding: 40px 5px 0px 5px !important;
+      display: flex;
+      justify-content: center;
+    }
+    @media screen and (min-width: 321px) and (max-width: 376px) {
+      padding: 40px 10px !important;
+      display: flex;
+      justify-content: center;
+    }
+
+    @media screen and (min-width: 376px) and (max-width: 426px) {
+      padding: 30px 10px !important;
+      display: flex;
+      justify-content: center;
+    }
+    @media screen and (min-width: 426px) and (max-width: 768px) {
+        padding: 50px !important;
+        display: flex;
+        justify-content: center;
+    }
+  }
+
+.card-container .owl-nav {
+    position: absolute !important;
+    top: -70px !important;
+    right: 20px !important;
+    @media screen and (max-width: 768px) {
+        margin-top: 40px !important;
+    }
+}
+.card-container  .owl-next, .card-container .owl-prev{
+    color:#525454 !important;
+    padding: 12px 18px !important;
+    background-color: #dfe5e5 !important;
+    border-radius: 50% !important;
+}
+.card-container .owl-theme .owl-nav .disabled {
+    opacity: .5 !important;
+    cursor: default !important;
+}
+.card-container .owl-theme .owl-nav [class*=owl-]:hover {
+    background: #869791 !important;
+    color: #FFF !important;
+    text-decoration: none !important;
+}
+.bg-body-tertiary{
+    background-color: white !important;
+}
+/* --------------form dialog----------------- */
+.mat-dialog-content{
+    margin:20px;
+    padding: 20px;
+    overflow: hidden !important;
+}
+.mat-mdc-dialog .mat-mdc-dialog-content {
+    max-height: auto !important; /* This overrides the default 65vh */
+}
+.cdk-overlay-pane.mat-mdc-dialog-panel .mat-mdc-dialog .mat-mdc-dialog-container .mdc-dialog__surface{
+    color: #dee2e6 !important;
+}
+.mat-mdc-form-field-subscript-wrapper, .mat-mdc-form-field-bottom-align::before{
+    display: none !important;
+}
+.mat-mdc-form-field-subscript-wrapper{
+    display: none !important;
+}
+/* --------------slider------------ */
+.owl-carousel .owl-item img{
+    height: auto !important;
+}
+.owl-carousel .owl-item{
+    @media screen and (min-width: 768px) and (max-width: 1393px) {
+    }
+
+}

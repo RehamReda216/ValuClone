@@ -1,0 +1,63 @@
+/* ------------- navbar --------------------- */
+.navbar{
+    position: fixed;
+    padding: 20px 0;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px) saturate(160%) contrast(45%) brightness(140%); 
+    z-index: 300;
+}
+/* ------------- navbar image --------------------- */
+.navbar-brand .image{
+    max-width: 140px;
+}
+/* ------------- navbar item --------------------- */
+
+.navbar-nav .nav-item{
+    position:relative;
+    margin-left:20px;
+}
+
+.navbar-nav .nav-item .nav-link{
+    color:black;
+    position: relative;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-item .nav-link::before{
+    content: '';
+    position:absolute;
+    width:8px;
+    height:8px;
+    bottom: 0px;
+    left:50%;
+    border-radius: 50%;
+    background-color:#fb2e00;
+    opacity: 0;
+    transition: all .3 ease-out 0s;
+}
+
+.navbar-nav .nav-item .nav-link:hover{
+    color:#fb2e00;
+}
+
+.navbar-nav .nav-item .nav-link:hover::before{
+    opacity: 1;
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .navbar{
+        width:100%;
+    }
+    .navbar-nav{
+        margin-top: 20px;
+    }
+    .navbar-nav .nav-item .nav-link::before {
+        position: relative;
+    }
+}
+

@@ -1,0 +1,18 @@
+.container{
+    padding-top: 100px;
+}
+span{
+    color: #00c4b3;
+    font-weight: bold;
+}
+
+.partner-img{
+    width:70%;
+    border-radius: 50px;
+    animation: imgBounce 3s ease-in-out infinite alternate;
+}
+@keyframes imgBounce {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); } /* Adjust bounce height as needed */
+    100% { transform: translateY(0px); }
+}

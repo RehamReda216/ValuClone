@@ -1,0 +1,13 @@
+.nav-tabs {
+    --bs-nav-tabs-border-width: 2px !important;
+    --bs-nav-tabs-border-radius: 0.9rem;
+    background-color: white;
+}
+.nav-item{
+  text-align: center;
+  padding: 8px 16px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
